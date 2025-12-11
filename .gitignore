@@ -1,0 +1,17 @@
+output/
+logs/ 
+runs/ 
+wandb/
+outputs/ 
+
+pretrained_models/ 
+*.pth 
+*.pt 
+*.bin  
+
+Miniconda3-latest-Linux-x86_64.sh  
+
+__pycache__/ 
+*.pyc 
+.ipynb_checkpoints/ 
+.DS_Store 
