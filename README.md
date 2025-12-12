@@ -11,9 +11,9 @@
 
 
 ## Introduction
-本專案以《Masked Autoencoders that Listen》為基礎，將遮罩觀念延伸至音訊分類任務（Fine-tuning），探討不同遮罩方式作為 Fine-tuning 階段的資料增強策略，並比較其對模型結果的影響。
+本專案以《Masked Autoencoders that Listen》[1] 為基礎，將遮罩觀念延伸至音訊分類任務（Fine-tuning），探討不同遮罩方式作為 Fine-tuning 階段的資料增強策略，並比較其對模型結果的影響。
 以下為我們預期的實作步驟：
-1. 依照原論文實作 Baseline Audio-MAE，使用 Speech Commands V2 資料集進行訓練，以建立可靠的比較基準。
+1. 依照原論文實作 Baseline Audio-MAE，使用 Speech Commands V2 資料集 [4] 進行訓練，以建立可靠的比較基準。
 2. 我們設計四種聲譜圖遮罩方式，分別為：
     - 時間遮罩（Time Masking）
     - 頻率遮罩（Frequency Masking）
@@ -30,9 +30,9 @@
 
 
 ## Demo
-本實作的 Source Code 來自於《Masked Autoencoders that Listen》
+本實作的 Source Code 來自於《Masked Autoencoders that Listen》[1]
 
-1. 請參考《Masked Autoencoders that Listen》Source Code 中的說明建立環境。
+1. 請參考《Masked Autoencoders that Listen》Source Code [5] 中的說明建立環境。
    [MAE repo](https://github.com/facebookresearch/mae)
 2. Baseline on Speech Commands V2：
 ```
@@ -68,10 +68,13 @@ bash run_sc.sh
 ## References
 文獻引用：
 [1] Huang, P.-Y. et al. “Masked Autoencoders that Listen,” NeurIPS 2022.
+
 [2] He, K. et al. “Masked Autoencoders are Scalable Vision Learners,” CVPR 2022.
+
 [3] https://github.com/pengzhiliang/MAE-pytorch?tab=readme-ov-file#
 
 資料：
-[1] SpeechCommands V2 Dataset - YuanGongND
+[4] SpeechCommands V2 Dataset - YuanGongND
+
 Source Code：
-[1] https://github.com/facebookresearch/AudioMAE
+[5] https://github.com/facebookresearch/AudioMAE
