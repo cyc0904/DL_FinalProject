@@ -254,6 +254,32 @@ class AudiosetDataset(Dataset):
                 f0 = random.randint(0, F - block_F)
                 fbank[t0:t0+block_T, f0:f0+block_F] = 0.0
 
+        # ===== 隨機 patch 遮罩（Patch Mask，類似 MAE） =====
+        elif self.mask_type == 'patch' and self.mask_ratio > 0:
+            # 設定 patch 大小（依照你的 fbank time / freq resolution 可以調）
+            patch_T = 4   # 沿時間軸的 patch 高度（frame 數）
+            patch_F = 4   # 沿頻率軸的 patch 寬度（mel-bin 數）
+
+            num_t = T // patch_T
+            num_f = F // patch_F
+
+            if num_t > 0 and num_f > 0:
+                total_patches = num_t * num_f
+                num_mask = max(1, int(total_patches * self.mask_ratio))
+
+                # 產生所有 patch 的索引
+                patch_indices = list(range(total_patches))
+                random.shuffle(patch_indices)
+
+                for pid in patch_indices[:num_mask]:
+                    t_idx = pid // num_f
+                    f_idx = pid % num_f
+
+                    t0 = t_idx * patch_T
+                    f0 = f_idx * patch_F
+
+                    fbank[t0:t0+patch_T, f0:f0+patch_F] = 0.0
+
 
 
         # cut and pad
