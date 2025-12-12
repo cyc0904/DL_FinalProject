@@ -67,6 +67,7 @@ bash run_sc.sh
 
 ## References
 文獻引用：
+
 [1] Huang, P.-Y. et al. “Masked Autoencoders that Listen,” NeurIPS 2022.
 
 [2] He, K. et al. “Masked Autoencoders are Scalable Vision Learners,” CVPR 2022.
@@ -74,7 +75,9 @@ bash run_sc.sh
 [3] https://github.com/pengzhiliang/MAE-pytorch?tab=readme-ov-file#
 
 資料：
+
 [4] SpeechCommands V2 Dataset - YuanGongND
 
 Source Code：
+
 [5] https://github.com/facebookresearch/AudioMAE
