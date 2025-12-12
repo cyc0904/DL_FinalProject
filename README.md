@@ -19,6 +19,7 @@
     - 頻率遮罩（Frequency Masking）
     - 時頻區塊遮罩（Time-Frequency Block Masking）
     - 隨機 Patch 遮罩（MAE-style Random Patch Masking）
+
 四種遮罩方式均以統一的資料流程與程式架構實作，我們預期這些不同遮罩策略將對音訊分類模型能力造成不同程度的影響，並將在後續結果中分析遮罩與模型的型表現之間的關係。
 
 
