@@ -26,13 +26,13 @@
 ## Findings
 我們發現雖然遮罩在Pre-Train階段能提升模型學習特徵的成效，但在音訊分類任務中卻無法提升準確率，反而有更差的結果。
 
+![result](assets/compare_masks_accuracy.png)
 
 不同遮罩策略（Masking Strategies）應用於音訊分類的結果
 
 
 ## Demo
 本實作的 Source Code 來自於《Masked Autoencoders that Listen》
- [MAE repo](https://github.com/facebookresearch/mae)
 
 1. 請參考《Masked Autoencoders that Listen》Source Code 中的說明建立環境。
    [MAE repo](https://github.com/facebookresearch/mae)
