@@ -55,7 +55,7 @@ bash run_sc.sh
     ```
     bash run_sc_random_patches.sh
     ```
-4. Evaluation - Plot
+4. Plot for Evaluation
     - 訓練過程中Loss與Accuracy的變化
     ```
     python plot_results.py
