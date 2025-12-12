@@ -26,9 +26,7 @@
 ## Findings
 我們發現雖然遮罩在Pre-Train階段能提升模型學習特徵的成效，但在音訊分類任務中卻無法提升準確率，反而有更差的結果。
 
-![result](assets/compare_masks_accuracy.png)
-
-不同遮罩策略（Masking Strategies）應用於音訊分類的結果
+![不同遮罩策略（Masking Strategies）應用於音訊分類的結果](assets/compare_masks_accuracy.png)
 
 
 ## Demo
@@ -41,16 +39,39 @@
 bash run_sc.sh
 ```
 3. Masking Strategy
-```
-bash run_sc.sh
-```
-
+    - 時間遮罩（Time Masking）
+    ```
+    bash run_sc_time.sh
+    ```
+    - 頻率遮罩（Frequency Masking）
+    ```
+    bash run_sc_freq.sh
+    ```
+    - 時頻區塊遮罩（Time-Frequency Block Masking）
+    ```
+    bash run_sc_timefreq.sh
+    ```
+    - 隨機 Patch 遮罩（MAE-style Random Patch Masking）
+    ```
+    bash run_sc_random_patches.sh
+    ```
+4. Evaluation - Plot
+    - 訓練過程中Loss與Accuracy的變化
+    ```
+    python plot_results.py
+    ```
+    - 不同遮罩策略Accuracy的比較
+    ```
+    python plot_compare_masks.py
+    ```  
 
 ## References
 文獻引用：
-Huang, P.-Y. et al. “Masked Autoencoders that Listen,” NeurIPS 2022.
-He, K. et al. “Masked Autoencoders are Scalable Vision Learners,” CVPR 2022.
-https://github.com/pengzhiliang/MAE-pytorch?tab=readme-ov-file#
+[1] Huang, P.-Y. et al. “Masked Autoencoders that Listen,” NeurIPS 2022.
+[2] He, K. et al. “Masked Autoencoders are Scalable Vision Learners,” CVPR 2022.
+[3] https://github.com/pengzhiliang/MAE-pytorch?tab=readme-ov-file#
 
-資料的 URL：SpeechCommands V2 Dataset - YuanGongND
-使用到的外部程式碼 URL：https://github.com/facebookresearch/AudioMAE
+資料：
+[1] SpeechCommands V2 Dataset - YuanGongND
+Source Code：
+[1] https://github.com/facebookresearch/AudioMAE
