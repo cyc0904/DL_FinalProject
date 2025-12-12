@@ -1,9 +1,12 @@
 # Audio-MAE: Masking Strategies for Supervised Audio Learning Audio-MAE：音訊遮罩策略於監督式學習中的應用
 
-## Group Mmeber
-第17組\n
+## Group Member
+第17組
+
 吳俊廷 M144020002 (資管系碩一 康藝晃老師Lab，產學計畫：日月光、聯電計畫)
+
 莊雅筑 M144020003 (資管系碩一 羅珮綺老師Lab)
+
 張詠晴 M144020064 (資管系碩一 康藝晃老師Lab，產學計畫：日月光、聯電計畫)
 
 
