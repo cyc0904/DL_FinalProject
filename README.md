@@ -1,5 +1,4 @@
-# Audio-MAE: Masking Strategies for Supervised Audio Learning 
-# Audio-MAE：音訊遮罩策略於監督式學習中的應用
+# Audio-MAE: Masking Strategies for Supervised Audio Learning Audio-MAE：音訊遮罩策略於監督式學習中的應用
 
 ## Group Mmeber
 第17組
